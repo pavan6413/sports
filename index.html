@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Project</title>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg,#1e90ff,#ff6f61);
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    /* Header */
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 30px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);
+      animation:slideDown 1s ease;
+    }
+    .logo{font-size:1.8rem;color:#ffd700;font-weight:bold;}
+    .header-right{display:flex;align-items:center;}
+    .header-right i{font-size:1.2rem;margin-left:20px;cursor:pointer;transition:.3s;}
+    .header-right i:hover{transform:scale(1.2);color:#ffd700;}
+    .search-bar input{padding:5px 10px;border-radius:5px;border:none;outline:none;margin-left:20px;}
+    /* Navbar */
+    nav{background:#222;padding:10px 20px;text-align:center;animation:fadeIn 1.2s ease;}
+    nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;}
+    nav ul li{margin:10px 15px;}
+    nav ul li a{
+      text-decoration:none;color:#fff;font-weight:bold;
+      padding:5px 10px;border-radius:5px;transition:.3s;
+    }
+    nav ul li a:hover{background:#ffd700;color:#222;}
+    /* Content */
+    .content{flex:1;display:flex;justify-content:space-between;align-items:center;
+      padding:50px 30px;flex-wrap:wrap;}
+    .content-left{flex:1;padding:20px;animation:fadeInLeft 1.2s ease;}
+    .content-left h2{font-size:2.5rem;margin-bottom:20px;}
+    .content-left p{margin-bottom:20px;font-size:1.2rem;line-height:1.5;}
+    .btn{padding:10px 20px;background:#ffd700;color:#222;border:none;
+      border-radius:5px;font-weight:bold;cursor:pointer;transition:.3s;}
+    .btn:hover{transform:scale(1.1);}
+    .content-right{flex:1;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
+      animation:fadeInRight 1.2s ease;}
+    .card{
+      background:rgba(255,255,255,0.1);border-radius:10px;padding:20px;
+      text-align:center;transition:.3s;box-shadow:0 4px 8px rgba(0,0,0,0.3);
+      width:250px;
+    }
+    .card img{width:100%;border-radius:10px;margin-bottom:15px;}
+    .card:hover{transform:translateY(-10px);background:rgba(255,255,255,0.2);}
+    /* Footer */
+    footer{background:#111;text-align:center;padding:20px;color:#aaa;font-size:.9rem;}
+    /* Animations */
+    @keyframes slideDown{from{transform:translateY(-100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+    @keyframes fadeInLeft{from{opacity:0;transform:translateX(-50px);}to{opacity:1;transform:translateX(0);}}
+    @keyframes fadeInRight{from{opacity:0;transform:translateX(50px);}to{opacity:1;transform:translateX(0);}}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    /* Responsive */
+    @media(max-width:768px){
+      .content{flex-direction:column;}
+      .header-right{flex-wrap:wrap;justify-content:center;}
+      .search-bar input{margin-top:10px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🏆 SportsProject</div>
+    <div class="header-right">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-shopping-cart"></i>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Cricket</a></li>
+      <li><a href="#">Football</a></li>
+      <li><a href="#">Basketball</a></li>
+      <li><a href="#">Tennis</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <section class="content">
+    <div class="content-left">
+      <h2>Welcome to SportsProject</h2>
+      <p>
+        Stay updated with the latest sports news, events, and highlights.  
+        From cricket to football, basketball to tennis – experience the thrill of every game here!
+      </p>
+      <button class="btn">Explore Now</button>
+    </div>
+    <div class="content-right">
+      <div class="card">
+        <img src="OIP.webp" alt="Cricket">
+        <h3>Cricket</h3>
+      </div>
+      <div class="card">
+        <img src="download.webp" alt="Football">
+        <h3>Football</h3>
+      </div>
+      <div class="card">
+        <img src="OIP.jpg" alt="Basketball">
+        <h3>Basketball</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SportsProject | Designed for Interview</p>
+  </footer>
+</body>
+</html>
